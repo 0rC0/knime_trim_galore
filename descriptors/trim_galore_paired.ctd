@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tool name="TrimGalorePaired" version="0.0.1" category="Trimming"
+      docurl="https://github.com/FelixKrueger/TrimGalore/blob/master/Docs/Trim_Galore_User_Guide.md">
+	<executableName>trim_galore</executableName>
+	<description><![CDATA[Trim Paired Reads]]></description>
+	<manual><![CDATA[trim_galore -o Trimmed_Reads --paired -q20]]></manual>
+	<docurl>Direct links in docs</docurl>
+	<cli>
+		<clielement optionIdentifier="--paired" isList="false" />
+    <clielement optionIdentifier="" isList="false">
+      <mapping referenceName="trim_galore_paired.argument-0" />
+    </clielement>
+		<clielement optionIdentifier="" isList="false">
+			<mapping referenceName="trim_galore_paired.argument-1" />
+		</clielement>
+    <clielement optionIdentifier="" isList="false">
+      <mapping referenceName="trim_galore_paired.argument-2" />
+    </clielement>
+    <clielement optionIdentifier="" isList="false">
+      <mapping referenceName="trim_galore_paired.argument-3" />
+    </clielement>
+	</cli>
+	<PARAMETERS version="0.0.1"
+	            xsi:noNamespaceSchemaLocation="http://open-ms.sourceforge.net/schemas/Param_1_4.xsd"
+	            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<NODE name="trim_galore_paired" description="trim_paired_reads">
+            <ITEM name="argument-0" value="" type="input-file" required="true" description="Output FastQ" supported_formats="*.fq" />
+            <ITEM name="argument-1" value="" type="input-file" required="true" description="output FastQ" supported_formats="*.fq" />
+            <ITEM name="argument-2" value="" type="output-file" required="true" description="output FastQ" supported_formats="*.fq" />
+            <ITEM name="argument-3" value="" type="output-file" required="true" description="output FastQ" supported_formats="*.fq" />
+        </NODE>
+    </PARAMETERS>
+</tool>
